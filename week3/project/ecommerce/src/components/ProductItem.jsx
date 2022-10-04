@@ -19,7 +19,7 @@ const ProductItem = ({ product }) => {
     })
   }
 
-  const isLiked = () => favorites.includes(product.id);
+  const isLiked = favorites.includes(product.id);
 
   return (
     <li className="productItem">
@@ -28,7 +28,11 @@ const ProductItem = ({ product }) => {
           <div className="product-image--container">
             <img src={product.image} alt={`${product.title}`} />
             <div className="product-image--favourite-container">
-              <img src={isLiked() ? SolidHeart : RegularHeart} onClick={clickHandler} alt='like'/>
+              <img
+                src={isLiked ? SolidHeart : RegularHeart}
+                onClick={clickHandler}
+                alt="like"
+              />
             </div>
           </div>
           <span className="title">{product.title}</span>

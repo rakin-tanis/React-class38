@@ -25,7 +25,7 @@ const ProductDetails = () => {
     })
   }
 
-  const isLiked = () => favorites.includes(data.id);
+  const isLiked = data ? favorites.includes(data.id): false;
 
   if (isLoading) return <div>Loading</div>
   if (isError) return <div>Something went wrong, try again later, please.</div>;
@@ -42,7 +42,7 @@ const ProductDetails = () => {
               <div className="product-image--favourite-container">
                 <img
                   className="product-image--favourite"
-                  src={isLiked() ? SolidHeart : RegularHeart}
+                  src={isLiked ? SolidHeart : RegularHeart}
                   onClick={clickHandler}
                   alt="like"
                 />
