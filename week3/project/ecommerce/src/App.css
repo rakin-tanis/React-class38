@@ -1,0 +1,170 @@
+img {
+  border-style: none;
+}
+
+.App {
+  /* margin: 8px; */
+}
+
+.banner {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.banner h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+  width: fit-content;
+}
+
+.banner .nav {
+  margin-left: 8px;
+}
+
+.banner .nav .navLink {
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.navbar ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  list-style: none;
+  background-color: #efeff0;
+  cursor: pointer;
+  font-weight: 700;
+  margin: 2px;
+  padding: 12px;
+}
+
+.navbar li:hover {
+  background-color: #d6d6d8;
+}
+
+.navbar li.selected {
+  background-color: #bdbdc1;
+}
+
+.productList {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin-block-end: 0;
+  margin-block-start: 0;
+  padding-inline-start: 0;
+}
+
+.productItem {
+  margin: 8px;
+  width: 100%;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.product img {
+  margin-bottom: auto;
+  margin-top: auto;
+  max-height: 300px;
+  object-fit: contain;
+  width: 100%;
+}
+
+.product .title {
+  overflow: hidden;
+  padding-top: 8px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+}
+
+@media (min-width: 600px) {
+  .productItem {
+    width: calc(50% - 16px);
+  }
+}
+
+@media (min-width: 1000px) {
+  .productItem {
+    width: calc(33% - 16px);
+  }
+}
+
+@media (min-width: 1600px) {
+  .productItem {
+    width: calc(25% - 16px);
+  }
+}
+
+.title-container {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.title-container--title {
+  margin-right: auto;
+}
+
+.product-details--information {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 600px) {
+  .product-details--information {
+    flex-direction: row-reverse;
+  }
+}
+
+.product-details--image {
+  min-width: 50%;
+}
+
+.product-image--container {
+  position: relative;
+}
+
+.product-image {
+  margin-bottom: auto;
+  margin-top: auto;
+  max-height: 300px;
+  object-fit: contain;
+  width: 100%;
+}
+
+.product-image--favourite-container {
+  background-color: #fff;
+  cursor: pointer;
+  height: 20px;
+  padding: 8px;
+  position: absolute;
+  right: 0;
+  top: 20px;
+  width: 20px;
+}
+
+.product-image--favourite {
+  color: red;
+}
+
+.product-image--favourite img {
+  border-style: none;
+}
+
+
+
+.product-details--information img {
+  max-height: 80vh;
+  order: 0;
+}
